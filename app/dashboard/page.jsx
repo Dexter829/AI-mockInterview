@@ -13,7 +13,7 @@ function Dashboard() {
         <AddNewInterview/>
       </div>
       {/* Previous Interview List */}
-      <InterviewList/>
+      <InterviewList />
 
     </div>
   )
