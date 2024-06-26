@@ -1,6 +1,3 @@
-import { Button } from "@/components/ui/button";
-
-
 export default function Home() {
   return (
     <div>
@@ -8,4 +5,13 @@ export default function Home() {
       <Button>Hello Ji</Button>
     </div>
   );
+}
+
+export async function getServerSideProps(context) {
+  return {
+    redirect: {
+      destination: '/dashboard', // Specify the path to your dashboard page
+      permanent: false, // This redirection is not permanent
+    },
+  };
 }
