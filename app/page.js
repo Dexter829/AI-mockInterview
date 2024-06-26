@@ -1,11 +1,12 @@
-import { Button } from "@/components/ui/button";
-
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
 
 export default function Home() {
-  return (
-    <div>
-      <h2>Hello</h2>
-      <Button>Hello Ji</Button>
-    </div>
-  );
+  const router = useRouter();
+
+  useEffect(() => {
+    router.push('/dashboard'); // Replace '/dashboard' with the path to your dashboard page
+  }, [router]);
+
+  return null; // Render nothing while redirecting
 }
